@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,400i,500,500i,600,600i,700,700i|Righteous&display=swap');
+
+/*----------------------------Basic Styling */
+
+body {
+    background-color: #000;
+}
+
+p   {
+    font-family: "Asap", sans-serif;
+    color: #a3a3a3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Righteous", sans-serif;
+    color: #c6eef7;
+}
+
+footer {
+    font-size: 12px;
+}
