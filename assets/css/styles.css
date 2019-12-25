@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Asap:400,400i,500,500i,600,600i,700,700i|Righteous&display=swap');
 
-/*----------------------------Basic Styling */
+/*------------------------------------------ Basic Styling */
 
 body {
     background-color: #000;
 }
+
+/*------------------------------------------ Fonts */
 
 p   {
     font-family: "Asap", sans-serif;
@@ -12,15 +14,69 @@ p   {
 }
 
 h1,
-h2,
+h2 {
+    font-family: "Righteous", sans-serif;
+    color: #c6eef7;
+}
+
 h3,
 h4,
 h5,
 h6 {
     font-family: "Righteous", sans-serif;
-    color: #c6eef7;
+    color: #a3a3a3;
 }
 
-footer {
+/*------------------------------------------ Header */
+
+.top-container {
+    padding: 30px;
+    text-align: center;
+}
+
+/*------------------------------------------ Navigation */
+
+/*------------------------------------------ Body */
+
+.container {
+    max-width: 100%;
+    padding: 75px 10px;
+}
+
+.image-container img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+}
+
+.text-box h4 {
+    padding: 20px 10px;
+    margin: 0;
+}
+    
+.text-box p {
+    padding: 20px 10px;
+    margin: 0;
+}
+
+.dashboard h2 {
+    padding: 30px;
+    text-align: center;
+}
+
+/*------------------------------------------ Media Queries */
+
+@media only screen and (max-width: 767px) {
+  .text-box,
+  .dashboard {
+      text-align: center;
+  }
+}
+
+/*------------------------------------------ Footer */
+
+footer p {
     font-size: 12px;
 }
