@@ -1,9 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Asap:400,400i,500,500i,600,600i,700,700i|Righteous&display=swap');
 
-/*------------------------------------------ Basic Styling */
+/*------------------------------------------ Background */
 
 body {
     background-color: #000;
+}
+
+.grey-block {
+    background-color: #141414;
+}
+
+.skewed-divider-c{
+  width:100%;
+  height:100px;
+  position:absolute;
+  left:0px;
+  background: linear-gradient(to left bottom, #000 49%, #141414 50%);
+}
+
+.skewed-divider-cc{
+  width:100%;
+  height:100px;
+  position:absolute;
+  left:0px;
+  background: linear-gradient(to right bottom, #141414 49%,#000 50%), linear-gradient(-50deg, #ffffff 16px, #000 0);
 }
 
 /*------------------------------------------ Fonts */
@@ -31,7 +51,8 @@ h6 {
 /*------------------------------------------ Header */
 
 .top-container {
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -123,15 +144,15 @@ h6 {
 
 .container {
     max-width: 100%;
-    padding: 75px 10px;
+    padding: 60px 10px;
 }
 
 .image-container img {
     object-fit: contain;
-    width: 90%;
+    width: 80%;
     height: auto;
-    margin: 0;
-    padding: 10px;
+    margin: 0px;
+    padding: 40px 10px 10px 10px;
     text-align: center;
 }
 
@@ -158,7 +179,7 @@ h6 {
 /*------------------------------------------ Dasboard */
 
 .dashboard {
-    padding: 20px;
+    padding: 75px 20px 20px 20px;
 }
 
 .slider-container {
@@ -169,7 +190,7 @@ h6 {
 
 .slider {
   -webkit-appearance: none;
-  width: 20vw;
+  width: 200px;
   height: 4px;
   border-radius: 5px;
   background: #3b3b3b;
@@ -202,7 +223,7 @@ h6 {
 }
 
 .calculator-output {
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 #riskofruinOutput,
@@ -217,15 +238,25 @@ h6 {
 /*------------------------------------------ Media Queries */
 
 @media only screen and (max-width: 767px) {
-  .text-box,
-  .dashboard {
-      text-align: center;
-  }
+    .text-box,
+    .dashboard {
+        text-align: center;
+    }
+    .image-container img {
+    max-width: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .image-container img {
+    min-width: 400px;
+    }
 }
 
 /*------------------------------------------ Footer */
 
 .footer-container {
+    background-color: #141414;
     padding: 20px;
 }
 

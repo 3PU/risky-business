@@ -35,9 +35,10 @@
             </div>
         </nav>
     </header>
-    <section class="container introduction" id="riskId">
+    <div class="skewed-divider-c"></div>
+    <section class="container introduction grey-block" id="riskId">
         <div class="row introduction-container">
-            <div class="col-xs-12 col-md-6 d-inline text-right image-container">
+            <div class="col-xs-12 col-md-6 d-inline text-center image-container">
                 <img src="assets/images/bitcoin.jpg" alt="Greyscale world map in the background with a phone in the foreground showing a bitcoin image.">
             </div>
             <div class="col-xs-12 col-md-6 d-inline text-box">
@@ -45,6 +46,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
             </div>
         </div>
+        <div class="skewed-divider-cc"></div>
     </section>
     <section class="container risk-of-ruin" id="rorId">
         <div class="row">
@@ -55,14 +57,15 @@
                 <h4>What is Risk of Ruin?</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
             </div>
-            <div class="d-none d-md-block col-md-6 text-left image-container">
+            <div class="d-none d-md-block col-md-6 text-center image-container">
                 <img src="assets/images/riskofruin.jpeg" alt="Man sitting at computer looking focused or worried.">
             </div>
         </div>
     </section>
-    <section class="container drawdown" id="ddId">
+    <div class="skewed-divider-c"></div>
+    <section class="container drawdown grey-block" id="ddId">
         <div class="row">
-            <div class="col-md-6 text-right image-container">
+            <div class="col-md-6 text-center image-container">
                 <img src="assets/images/drawdown.jpg" alt="Man in suit holding a tablet in front of a price chart.">
             </div>
             <div class="col-xs-12 col-md-6 text-box">
@@ -70,6 +73,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
             </div>
         </div>
+        <div class="skewed-divider-cc"></div>
     </section>
     <section class="container variance" id="varId">    
         <div class="row">
@@ -85,28 +89,29 @@
             </div>
         </div>
     </section>
-    <section class="container dashboard" id="calcId">
+    <div class="skewed-divider-c"></div>
+    <section class="container dashboard grey-block" id="calcId">
         <div>
             <h2>RISK CALCULATOR</h2>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-4 slider-container">
+            <div class="col-md-auto slider-container">
                 <p>Win Rate: <span id="winRateDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="1" max="100" value="50" class="slider" id="winRateRange">
             </div>
-            <div class="col-md-4 slider-container">
+            <div class="col-md-auto slider-container">
                 <p>Payoff Ratio: <span id="payOffDisplay"></span></p>
                 <input type="range" min="1" max="10" value="2.5" step="0.25" class="slider" id="payOffRange">
             </div>
-            <div class="col-md-4 slider-container">
+            <div class="col-md-auto slider-container">
                 <p>Risk Per Trade: <span id="riskperTradeDisplay"></span></p>
                 <input type="range" min="0.25" max="5" value="1" step="0.25" class="slider" id="riskperTradeRange">
             </div>
-            <div class="col-md-4 slider-container">
+            <div class="col-md-auto slider-container">
                 <p>Max Drawdown: <span id="drawdownDisplay"></span></p>
                 <input type="range" min="1" max="100" value="50" step="1"" class="slider" id="drawdownRange">
             </div>
-            <div class="col-md-4 slider-container">
+            <div class="col-md-auto slider-container">
                 <p>Number of Trades: <span id="numberOfTrialsDisplay"></span></p>
                 <input type="range" min="100" max="1000" value="500" step="100"" class="slider" id="numberOfTrialsRange">
             </div>
