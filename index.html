@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Risky Business</title>
 </head>
 <body>
     <header>
-        <div class="container top-container">
+        <div class="container text-center grey-block">
             <div class="col-md-12">
                 <h1>RISKY BUSINESS</h1>
                 <h6>- THE IMPORTANCE OF RISK MANAGEMENT IN TRADING -</h6>
@@ -35,8 +35,8 @@
             </div>
         </nav>
     </header>
-    <div class="skewed-divider-c"></div>
-    <section class="container introduction grey-block" id="riskId">
+    <div class="skewed-divider-cc"></div>
+    <section class="container introduction" id="riskId">
         <div class="row introduction-container">
             <div class="col-xs-12 col-md-6 d-inline text-center image-container">
                 <img src="assets/images/bitcoin.jpg" alt="Greyscale world map in the background with a phone in the foreground showing a bitcoin image.">
@@ -45,8 +45,7 @@
                 <h4>Why is risk management important?</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
             </div>
-        </div>
-        <div class="skewed-divider-cc"></div>
+        </div>        
     </section>
     <section class="container risk-of-ruin" id="rorId">
         <div class="row">
@@ -62,8 +61,7 @@
             </div>
         </div>
     </section>
-    <div class="skewed-divider-c"></div>
-    <section class="container drawdown grey-block" id="ddId">
+    <section class="container drawdown" id="ddId">
         <div class="row">
             <div class="col-md-6 text-center image-container">
                 <img src="assets/images/drawdown.jpg" alt="Man in suit holding a tablet in front of a price chart.">
@@ -73,7 +71,6 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
             </div>
         </div>
-        <div class="skewed-divider-cc"></div>
     </section>
     <section class="container variance" id="varId">    
         <div class="row">
@@ -100,39 +97,39 @@
                 <input type="range" min="1" max="100" value="50" class="slider" id="winRateRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Payoff Ratio: <span id="payOffDisplay"></span></p>
+                <p>Payoff Ratio: <span id="payOffDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="1" max="10" value="2.5" step="0.25" class="slider" id="payOffRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Risk Per Trade: <span id="riskperTradeDisplay"></span></p>
+                <p>Risk Per Trade: <span id="riskperTradeDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="0.25" max="5" value="1" step="0.25" class="slider" id="riskperTradeRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Max Drawdown: <span id="drawdownDisplay"></span></p>
+                <p>Max Drawdown: <span id="drawdownDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="1" max="100" value="50" step="1"" class="slider" id="drawdownRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Number of Trades: <span id="numberOfTrialsDisplay"></span></p>
+                <p>Number of Trades: <span id="numberOfTrialsDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="100" max="1000" value="500" step="100"" class="slider" id="numberOfTrialsRange">
             </div>
         </div>
         <div class="container">
             <div class="row justify-content-center text-center dashboardoutput">
-                <div class="col-md-6 calculator-output">
+                <div class="col-md-auto calculator-output">
                     <span id="riskofruinOutput"></span>
-                    <p>Risk Of Ruin</p>
+                    <p>Risk Of Ruin&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 </div>
-                <div class="col-md-6 calculator-output">
+                <div class="col-md-auto calculator-output">
                     <span id="riskofdrawdownOutpout"></span>
-                    <p>Max DD Probability</p>
+                    <p>Max DD Probability&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 </div>
-                <div class="col-md-6 calculator-output">
+                <div class="col-md-auto calculator-output">
                     <span id="maxlossOutput"></span>
-                    <p>Max Conseq. Losses</p>
+                    <p>Max Conseq. Losses&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 </div>
-                <div class="col-md-6 calculator-output">
+                <div class="col-md-auto calculator-output">
                     <span id="maxwinOutput"></span>
-                    <p>Max Conseq. Wins</p>
+                    <p>Max Conseq. Wins&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 </div>
             </div>
         </div>
