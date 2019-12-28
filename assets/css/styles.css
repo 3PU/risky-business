@@ -27,12 +27,14 @@ h6 {
     color: #a3a3a3;
 }
 
+
 /*------------------------------------------ Header */
 
 .top-container {
     padding: 30px;
     text-align: center;
 }
+
 
 /*------------------------------------------ Navigation */
 
@@ -76,7 +78,7 @@ h6 {
     position: fixed;
     background-color: #000;
     border: 1px solid #c6eef7;
-    border-radius: 10px;
+    border-radius: 5px;
     list-style: none;
     right: -50px;
     top: 100px;
@@ -148,6 +150,70 @@ h6 {
     text-align: center;
 }
 
+.fa-info-circle {
+    color: #c6eef7;
+}
+
+
+/*------------------------------------------ Dasboard */
+
+.dashboard {
+    padding: 20px;
+}
+
+.slider-container {
+    text-align: center;
+    width:250px;
+    padding: 20px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 20vw;
+  height: 4px;
+  border-radius: 5px;
+  background: #3b3b3b;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #c6eef7;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c6eef7;
+  cursor: pointer;
+}
+
+.calculator-output {
+    padding: 40px 20px;
+}
+
+#riskofruinOutput,
+#riskofdrawdownOutpout,
+#maxlossOutput,
+#maxwinOutput {
+    font-family: "Righteous", sans-serif;
+    color: #c6eef7;
+    font-size: 40px;
+}
+
 /*------------------------------------------ Media Queries */
 
 @media only screen and (max-width: 767px) {
@@ -159,6 +225,11 @@ h6 {
 
 /*------------------------------------------ Footer */
 
+.footer-container {
+    padding: 20px;
+}
+
 footer p {
+    margin: 0;
     font-size: 12px;
 }

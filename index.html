@@ -85,50 +85,56 @@
             </div>
         </div>
     </section>
-    <section class="container dashboard risk-calculator" id="calcId">
+    <section class="container dashboard" id="calcId">
         <div>
             <h2>RISK CALCULATOR</h2>
         </div>
-        <div class="row dashboard-sliders">
-            <div class="col-xs-12 col-sm-6 col-md4 winRateSlider">
-                <p>Win Rate: <span id="winRateDisplay"></span></p>
+        <div class="row justify-content-center">
+            <div class="col-md-4 slider-container">
+                <p>Win Rate: <span id="winRateDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="1" max="100" value="50" class="slider" id="winRateRange">
             </div>
-            <div class="col-xs-12 col-sm-6 col-md4 payoffSlider">
+            <div class="col-md-4 slider-container">
                 <p>Payoff Ratio: <span id="payOffDisplay"></span></p>
-                <input type="range" min="1" max="10" value="2.5" step="0.5" class="slider" id="payOffRange">
+                <input type="range" min="1" max="10" value="2.5" step="0.25" class="slider" id="payOffRange">
             </div>
-            <div class="col-xs-12 col-sm-6 col-md4 riskpertradeSlider">
+            <div class="col-md-4 slider-container">
                 <p>Risk Per Trade: <span id="riskperTradeDisplay"></span></p>
                 <input type="range" min="0.25" max="5" value="1" step="0.25" class="slider" id="riskperTradeRange">
             </div>
-            <div class="col-xs-12 col-sm-6 col-md4 drawdownSlider">
+            <div class="col-md-4 slider-container">
                 <p>Max Drawdown: <span id="drawdownDisplay"></span></p>
                 <input type="range" min="1" max="100" value="50" step="1"" class="slider" id="drawdownRange">
             </div>
-            <div class="col-xs-12 col-sm-6 col-md4 samplesizeSlider">
+            <div class="col-md-4 slider-container">
                 <p>Number of Trades: <span id="numberOfTrialsDisplay"></span></p>
-        <input type="range" min="100" max="1000" value="500" step="100"" class="slider" id="numberOfTrialsRange">
+                <input type="range" min="100" max="1000" value="500" step="100"" class="slider" id="numberOfTrialsRange">
             </div>
         </div>
-        <div class="row dashboardoutput">
-            <div class="col-xs-12 col-sm-6 col-md4">
-                <p>Risk Of Ruin: <span id="riskofruinOutput"></span></p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md4">
-                <p>Max DD Probability: <span id="riskofdrawdownOutpout"></span></p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md4">
-                <p>Max Conseq. Loss <span id="maxlossOutput"></span></p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md4">
-                <p>Max Conseq. Loss <span id="maxwinOutput"></span></p>
+        <div class="container">
+            <div class="row justify-content-center text-center dashboardoutput">
+                <div class="col-md-6 calculator-output">
+                    <span id="riskofruinOutput"></span>
+                    <p>Risk Of Ruin</p>
+                </div>
+                <div class="col-md-6 calculator-output">
+                    <span id="riskofdrawdownOutpout"></span>
+                    <p>Max DD Probability</p>
+                </div>
+                <div class="col-md-6 calculator-output">
+                    <span id="maxlossOutput"></span>
+                    <p>Max Conseq. Losses</p>
+                </div>
+                <div class="col-md-6 calculator-output">
+                    <span id="maxwinOutput"></span>
+                    <p>Max Conseq. Wins</p>
+                </div>
             </div>
         </div>
     </section>
 </body>
 <footer>
-    <div class="container">
+    <div class="container footer-container">
         <p>©2020 RISKY BUSINESS</p>
     </div>
 </footer>
