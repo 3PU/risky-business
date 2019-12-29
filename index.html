@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>Risky Business</title>
 </head>
 <body>
@@ -93,23 +92,23 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-auto slider-container">
-                <p>Win Rate: <span id="winRateDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                <p>Win Rate: <span id="winRateDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="Percentage of winning trades."><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="1" max="100" value="50" class="slider" id="winRateRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Payoff Ratio: <span id="payOffDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                <p>Payoff Ratio: <span id="payOffDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The average R-multiple of all profitable trades."><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="1" max="10" value="2.5" step="0.25" class="slider" id="payOffRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Risk Per Trade: <span id="riskperTradeDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                <p>Risk Per Trade: <span id="riskperTradeDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The amount of risk taken on each trade."><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="0.25" max="5" value="1" step="0.25" class="slider" id="riskperTradeRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Max Drawdown: <span id="drawdownDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                <p>Max Drawdown: <span id="drawdownDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The max drawdown you are willing to accept."><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="1" max="100" value="50" step="1"" class="slider" id="drawdownRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Number of Trades: <span id="numberOfTrialsDisplay"></span>&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                <p>Number of Trades: <span id="numberOfTrialsDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The number of trades you want the calculations to be based upon."><i class="fa fa-info-circle"></i></span></p>
                 <input type="range" min="100" max="1000" value="500" step="100"" class="slider" id="numberOfTrialsRange">
             </div>
         </div>
@@ -117,28 +116,31 @@
             <div class="row justify-content-center text-center dashboardoutput">
                 <div class="col-md-auto calculator-output">
                     <span id="riskofruinOutput"></span>
-                    <p>Risk Of Ruin&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                    <p>Risk Of Ruin&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="The probability of blowing up the account."><i class="fa fa-info-circle"></i></span></p>
                 </div>
                 <div class="col-md-auto calculator-output">
                     <span id="riskofdrawdownOutpout"></span>
-                    <p>Max DD Probability&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                    <p>Max DD Probability&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="The probability of reaching your defined max drawdown."><i class="fa fa-info-circle"></i></span></p>
                 </div>
                 <div class="col-md-auto calculator-output">
                     <span id="maxlossOutput"></span>
-                    <p>Max Conseq. Losses&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                    <p>Max Conseq. Losses&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="The probability of experiencing 10 losing trades in a row."><i class="fa fa-info-circle"></i></span></p>
                 </div>
                 <div class="col-md-auto calculator-output">
                     <span id="maxwinOutput"></span>
-                    <p>Max Conseq. Wins&nbsp;&nbsp;&nbsp;<span><i class="fa fa-info-circle"></i></span></p>
+                    <p>Max Conseq. Wins&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="The probability of experiencing 10 winning trades in a row."><i class="fa fa-info-circle"></i></span></p>
                 </div>
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container footer-container">
+            <p>©2020 RISKY BUSINESS</p>
+        </div>
+    </footer>
 </body>
-<footer>
-    <div class="container footer-container">
-        <p>©2020 RISKY BUSINESS</p>
-    </div>
-</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/js/dashboard.js"></script>
 </html>

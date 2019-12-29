@@ -9,10 +9,10 @@ var drawdownOutput =document.getElementById("drawdownDisplay");
 var numberOfTrialsSlider = document.getElementById("numberOfTrialsRange");
 var numberOfTrialsOutput = document.getElementById("numberOfTrialsDisplay");
 
-winRateOutput.innerHTML = winRateSlider.value;
-payOffOutput.innerHTML = payOffSlider.value;
-riskPerTradeOutput.innerHTML = riskPerTradeSlider.value;
-drawdownOutput.innerHTML = drawdownSlider.value;
+winRateOutput.innerHTML = winRateSlider.value + " %";
+payOffOutput.innerHTML = payOffSlider.value + "R";
+riskPerTradeOutput.innerHTML = riskPerTradeSlider.value + " %";
+drawdownOutput.innerHTML = drawdownSlider.value + " %";
 numberOfTrialsOutput.innerHTML = numberOfTrialsSlider.value;
 
 winRateSlider.oninput = function() {
@@ -23,7 +23,7 @@ winRateSlider.oninput = function() {
 }
 
 payOffSlider.oninput = function() {
-  payOffOutput.innerHTML = this.value;
+  payOffOutput.innerHTML = this.value + "R";
   riskOfRuinPercent();
 }
 
@@ -77,3 +77,4 @@ maxDrawDown();
 maxLosingStreak();
 maxWinningStreak();
 
+$('.dashboard-tooltip').tooltip();

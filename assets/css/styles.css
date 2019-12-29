@@ -175,6 +175,12 @@ h6 {
     padding: 100px 20px 20px 20px;
 }
 
+.tooltip .tooltip-inner {
+    font-family: "Asap", sans-serif;
+    background-color: #c6eef7;
+    color: #000;
+}
+
 .slider-container {
     text-align: center;
     width:250px;
@@ -237,6 +243,11 @@ h6 {
     }
     .image-container img {
     max-width: 400px;
+    }
+
+    .slider-container i,
+    .calculator-output i {
+        display: none;
     }
 }
 
