@@ -30,6 +30,7 @@ $(document).ready(function() {
         }
         else {
             $("#ror-content").removeClass("item-opened").addClass("item-closed");
+            $("#ror-chevron-icon").removeClass("fa-chevron-up").addClass("fa-chevron-down");
         }
     });
 
@@ -46,6 +47,7 @@ $(document).ready(function() {
         }
         else {
             $("#dd-content").removeClass("item-opened").addClass("item-closed");
+            $("#dd-chevron-icon").removeClass("fa-chevron-up").addClass("fa-chevron-down");
         }
     });
 
@@ -62,6 +64,7 @@ $(document).ready(function() {
         }
         else {
             $("#v-content").removeClass("item-opened").addClass("item-closed");
+            $("#v-chevron-icon").removeClass("fa-chevron-up").addClass("fa-chevron-down");
         }
     });   
 
