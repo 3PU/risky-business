@@ -17,70 +17,86 @@
                 <h6>- THE IMPORTANCE OF RISK MANAGEMENT IN TRADING -</h6>
             </div>
         </div>
-        <nav>
-            <div class="container-fluid nav-toggler">
-                <input type="checkbox" id="menuToggle" />
-                <label for="menuToggle">
-                    <span><i class="fa fa-times" aria-hidden="true"></i></span><span><i class="fa fa-bars" aria-hidden="true"></i></span>
-                </label>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#riskId">Risk Management</a></li>
-                    <li><a href="index.html#rorId">Risk Of Ruin</a></li>
-                    <li><a href="index.html#ddId">Drawdown</a></li>
-                    <li><a href="index.html#varId">Variance</a></li>
-                    <li><a href="index.html#calcId">Risk Calculator</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
     <div class="skewed-divider-cc"></div>
-    <section class="container introduction" id="riskId">
-        <div class="row introduction-container">
-            <div class="col-xs-12 col-md-6 d-inline text-center image-container">
+    <section class="container accordionwrapper introduction">
+        <div class="row" id="rm-heading">
+            <div class="col-12 item-heading">
+                <h5><span><i id="rm-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;Why is risk management important?</h5>
+            </div>
+        </div>
+        <div class="row item-content item-closed" id="rm-content">
+            <div class="col-12 d-md-none text-center image-container">
                 <img src="assets/images/bitcoin.jpg" alt="Greyscale world map in the background with a phone in the foreground showing a bitcoin image.">
             </div>
-            <div class="col-xs-12 col-md-6 d-inline text-box">
-                <h4>Why is risk management important?</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
+            <div class="col-xs-12 col-md-8 d-inline item-text">                
+                <p>As a trader, trading capital is your main working tool. If you run out of funds to trade, you will be unable to trade and thus lose your job. No matter which market you are trading or which trading strategy you apply, losses are inevitably going to happen.</p>
+                <p>Therefore, protecting your trading capital needs to always have the highest priority. Ideally, the amount you risk on each trade should be based on your risk of ruin and max drawdown tolerance, two topics that we'll explain futher below.</p>
             </div>
-        </div>        
+            <div class="d-none d-md-block col-xs-12 col-md-4 image-container">
+                <img src="assets/images/bitcoin.jpg" alt="Greyscale world map in the background with a phone in the foreground showing a bitcoin image.">
+            </div>
+        </div>
     </section>
-    <section class="container risk-of-ruin" id="rorId">
-        <div class="row">
-            <div class="d-block d-md-none col-md-6 text-center image-container">
+    <section class="container accordionwrapper risk-of-ruin">
+        <div class="row" id="ror-heading">
+            <div class="col-12 item-heading">
+                <h5><span><i id="ror-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;What is Risk of Ruin?</h5>
+            </div>
+        </div>
+        <div class="row item-content item-closed" id="ror-content">
+            <div class="col-12 d-md-none text-center image-container">
                 <img src="assets/images/riskofruin.jpeg" alt="Man sitting at computer looking focused or worried.">
             </div>
-            <div class="col-xs-12 col-md-6 d-inline text-box">
-                <h4>What is Risk of Ruin?</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
+            <div class="col-xs-12 col-md-7 item-text">
+                <p>Risk of Ruin also called 'RoR' is a concept used in trading, insurance and gambling. The risk of ruin defines the likelihood of losing all your trading capital or gambling bankroll.</p>
+                <p>For example, a simple coin toss has a risk of ruin of 50% because over time, the risk of ruin is 50% because there is no statistical edge of hitting heads or tails.</p>
+                <p>Based on multiple factors, such as gamling/trading edge, risk and number of bets/trades, the risk of ruin increases or decreases.
             </div>
-            <div class="d-none d-md-block col-md-6 text-center image-container">
+            <div class="d-none d-md-block col-xs-12 col-md-5 image-container">
                 <img src="assets/images/riskofruin.jpeg" alt="Man sitting at computer looking focused or worried.">
             </div>
         </div>
     </section>
-    <section class="container drawdown" id="ddId">
-        <div class="row">
-            <div class="col-md-6 text-center image-container">
+    <section class="container accordionwrapper drawdown">
+        <div class="row" id="dd-heading">
+            <div class="col-12 item-heading">
+                <h5><span><i id="dd-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;Controlling Drawdown</h5>
+            </div>
+        </div>
+        <div class="row item-content item-closed" id="dd-content">
+            <div class="col-12 d-md-none text-center image-container">
                 <img src="assets/images/drawdown.jpg" alt="Man in suit holding a tablet in front of a price chart.">
             </div>
-            <div class="col-xs-12 col-md-6 text-box">
-                <h4>Controlling Drawdown</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
+            <div class="col-xs-12 col-md-7 item-text">
+                <p>A drawdown is the reduction of your trading capital after a series of losses. The drawdown is calculated as a percentage difference between the peak in your trading capital minus the capital after a series of losses.</p>
+                <p>No matter how strong your trading strategy is, you will eventually experience a losing streak. The bigger the drawdown, the harder it will be to recover from the drawdown.</p>
+                <p>For example, if you experience a 20% drawdown, you will need to make 25% in profit to recover your account to break even. Should you on the other hand experience a 50% drawdown, you will need to make 100% in profit to recover your account to break even.</p>
+                <p>The size of drawdowns and likelihood of experiencing them increase or decreases based on your win rate, average payoff ratio, risk per trade and number of trades.</p>
+            </div>
+            <div class="d-none d-md-block col-xs-12 col-md-5 image-container">
+                <img src="assets/images/drawdown.jpg" alt="Man in suit holding a tablet in front of a price chart.">
             </div>
         </div>
     </section>
-    <section class="container variance" id="varId">    
-        <div class="row">
-            <div class="d-block d-md-none text-center image-container">
+    <section class="container accordionwrapper variance">    
+        <div class="row" id="v-heading">
+            <div class="col-12 item-heading">
+                <h5><span><i id="v-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;Accepting Variance</h5>
+            </div>
+        </div>
+        <div class="row item-content item-closed" id="v-content">
+            <div class="col-12 d-md-none text-center image-container">
                 <img src="assets/images/variance.png" alt="Mathematical formula for calculating variance. Bright text on black background.">
             </div>
-            <div class="col-xs-12 col-md-6 text-box">
-                <h4>Accepting Variance</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tempore quis rem saepe adipisci nesciunt vitae laborum, blanditiis sed? Ipsam ab, quo vitae cumque velit consequuntur cum quibusdam dolorem porro exercitationem neque saepe non in esse rerum dolorum qui itaque obcaecati! Ullam odio neque nisi ipsum rem aperiam enim inventore?</p>
+            <div class="col-xs-12 col-md-7 item-text">
+                <p>Understanding and accepting variance in trading is very important, why is that? Let's say you have a trading strategy that has a winning percentage of 60%, meaning that 6 out of 10 trades you take would end up being winning trades.</p>
+                <p>Even if you only have a 1:1 risk/reward ratio on your trades (risk 1$ to make 1$), for every 100 trades you take, you'd make 60$ and lose 40$, so a net profit of 20$. So far so good.</p>
+                <p>But this is where variance comes into play. Just because 6 out of 10 trades should be profitable they rarely will be evenly distributed. That means that there's a good chance you might experience more than 4 losing trades in a row now and then.</p>
+                <p>To give you an example and to put this into numbers, over a 500 trade period with a 60% win rate, the chance of experiencing at least 7 losing trades in a row is actually 39%.</p>
+                <p>Therefore, understanding and accepting variance and how it can affect your trading is very important.
             </div>
-            <div class="d-none d-md-block col-xs-12 col-md-6 text-left image-container">
+            <div class="d-none d-md-block col-xs-12 col-md-5 image-container">
                 <img src="assets/images/variance.png" alt="Mathematical formula for calculating variance. Bright text on black background.">
             </div>
         </div>
@@ -143,4 +159,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/js/dashboard.js"></script>
+<script type="text/javascript" src="assets/js/accordion.js"></script>
 </html>

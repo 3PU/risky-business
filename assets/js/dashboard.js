@@ -1,19 +1,13 @@
-var winRateSlider = document.getElementById("winRateRange");
-var winRateOutput = document.getElementById("winRateDisplay");
-var payOffSlider = document.getElementById("payOffRange");
-var payOffOutput = document.getElementById("payOffDisplay");
-var riskPerTradeSlider = document.getElementById("riskperTradeRange");
-var riskPerTradeOutput = document.getElementById("riskperTradeDisplay");
-var drawdownSlider = document.getElementById("drawdownRange");
-var drawdownOutput =document.getElementById("drawdownDisplay");
-var numberOfTrialsSlider = document.getElementById("numberOfTrialsRange");
-var numberOfTrialsOutput = document.getElementById("numberOfTrialsDisplay");
-
-winRateOutput.innerHTML = winRateSlider.value + " %";
-payOffOutput.innerHTML = payOffSlider.value + "R";
-riskPerTradeOutput.innerHTML = riskPerTradeSlider.value + " %";
-drawdownOutput.innerHTML = drawdownSlider.value + " %";
-numberOfTrialsOutput.innerHTML = numberOfTrialsSlider.value;
+const winRateSlider = document.getElementById("winRateRange");
+const winRateOutput = document.getElementById("winRateDisplay");
+const payOffSlider = document.getElementById("payOffRange");
+const payOffOutput = document.getElementById("payOffDisplay");
+const riskPerTradeSlider = document.getElementById("riskperTradeRange");
+const riskPerTradeOutput = document.getElementById("riskperTradeDisplay");
+const drawdownSlider = document.getElementById("drawdownRange");
+const drawdownOutput =document.getElementById("drawdownDisplay");
+const numberOfTrialsSlider = document.getElementById("numberOfTrialsRange");
+const numberOfTrialsOutput = document.getElementById("numberOfTrialsDisplay");
 
 winRateSlider.oninput = function() {
   winRateOutput.innerHTML = this.value + " %";
@@ -70,7 +64,14 @@ var maxWinningStreak = function () {
     var n = parseInt(numberOfTrialsSlider.value);
     var totalLossStreak = (w * n) * 0.001;
     document.getElementById("maxwinOutput").innerHTML = totalLossStreak.toFixed(2) + " %";
-};
+}
+
+var init = function () {
+winRateOutput.innerHTML = winRateSlider.value + " %";
+payOffOutput.innerHTML = payOffSlider.value + "R";
+riskPerTradeOutput.innerHTML = riskPerTradeSlider.value + " %";
+drawdownOutput.innerHTML = drawdownSlider.value + " %";
+numberOfTrialsOutput.innerHTML = numberOfTrialsSlider.value;
 
 riskOfRuinPercent();
 maxDrawDown();
@@ -78,3 +79,7 @@ maxLosingStreak();
 maxWinningStreak();
 
 $('.dashboard-tooltip').tooltip();
+
+}
+
+window.onload = init ();
