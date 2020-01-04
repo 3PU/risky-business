@@ -25,7 +25,7 @@
                 <h5><span><i id="rm-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;Why is risk management important?</h5>
             </div>
         </div>
-        <div class="row item-content item-closed" id="rm-content">
+        <div class="row item-content item-open" id="rm-content">
             <div class="col-12 d-md-none text-center image-container">
                 <img src="assets/images/bitcoin.jpg" alt="Greyscale world map in the background with a phone in the foreground showing a bitcoin image.">
             </div>
@@ -103,28 +103,48 @@
     </section>
     <div class="skewed-divider-c"></div>
     <section class="container dashboard grey-block" id="calcId">
-        <div>
-            <h2>RISK CALCULATOR</h2>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2>RISK CALCULATOR</h2>
+            </div>
+            <div class="col-xs-12 col-md-8 text-center item-text">
+                <p>Adjust the sliders below based on your historical trading statistics to calculate the probability of your risk of ruin, reaching your drawdown and seeing 10 consecutive losses or wins in a row.</p>
+            </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-auto slider-container">
-                <p>Win Rate: <span id="winRateDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="Percentage of winning trades."><i class="fa fa-info-circle"></i></span></p>
+                <p class="dashboard-item-title">Win Rate: <span id="winRateDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="Percentage of winning trades."><i class="fa fa-info-circle"></i></span></p>
+                <div class="d-md-none text-center">
+                    <p class="dashboard-item-description">(Percentage of winning trades)</p>
+                </div>
                 <input type="range" min="1" max="100" value="50" class="slider" id="winRateRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Payoff Ratio: <span id="payOffDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The average R-multiple of all profitable trades."><i class="fa fa-info-circle"></i></span></p>
+                <p class="dashboard-item-title">Payoff Ratio: <span id="payOffDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The average R-multiple of all profitable trades."><i class="fa fa-info-circle"></i></span></p>
+                <div class="d-md-none text-center">
+                    <p class="dashboard-item-description">(The average R-multiple of all profitable trades)</p>
+                </div>
                 <input type="range" min="1" max="10" value="2.5" step="0.25" class="slider" id="payOffRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Risk Per Trade: <span id="riskperTradeDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The amount of risk taken on each trade."><i class="fa fa-info-circle"></i></span></p>
+                <p class="dashboard-item-title">Risk Per Trade: <span id="riskperTradeDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The amount of risk you take on each trade."><i class="fa fa-info-circle"></i></span></p>
+                <div class="d-md-none text-center">
+                    <p class="dashboard-item-description">(The amount of risk you take on each trade)</p>
+                </div>
                 <input type="range" min="0.25" max="5" value="1" step="0.25" class="slider" id="riskperTradeRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Max Drawdown: <span id="drawdownDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The max drawdown you are willing to accept."><i class="fa fa-info-circle"></i></span></p>
+                <p class="dashboard-item-title">Max Drawdown: <span id="drawdownDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The max drawdown you are willing to accept."><i class="fa fa-info-circle"></i></span></p>
+                <div class="d-md-none text-center">
+                    <p class="dashboard-item-description">(The max drawdown you are willing to accept)</p>
+                </div>
                 <input type="range" min="1" max="100" value="50" step="1"" class="slider" id="drawdownRange">
             </div>
             <div class="col-md-auto slider-container">
-                <p>Number of Trades: <span id="numberOfTrialsDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The number of trades you want the calculations to be based upon."><i class="fa fa-info-circle"></i></span></p>
+                <p class="dashboard-item-title">Number of Trades: <span id="numberOfTrialsDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The number of trades you want the calculations to be based upon."><i class="fa fa-info-circle"></i></span></p>
+                <div class="d-md-none text-center">
+                    <p class="dashboard-item-description">(The number of trades you want the calculations to be based upon)</p>
+                </div>
                 <input type="range" min="100" max="1000" value="500" step="100"" class="slider" id="numberOfTrialsRange">
             </div>
         </div>
@@ -132,19 +152,31 @@
             <div class="row justify-content-center text-center dashboardoutput">
                 <div class="col-md-auto calculator-output">
                     <span id="riskofruinOutput"></span>
-                    <p>Risk Of Ruin&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="The probability of blowing up the account."><i class="fa fa-info-circle"></i></span></p>
+                    <p class="dashboard-item-title">Risk Of Ruin&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="Probability of blowing up the account."><i class="fa fa-info-circle"></i></span></p>
+                    <div class="d-md-none text-center">
+                        <p class="dashboard-item-description">(Probability of blowing up the account)</p>
+                    </div>
                 </div>
                 <div class="col-md-auto calculator-output">
                     <span id="riskofdrawdownOutpout"></span>
-                    <p>Max DD Probability&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="The probability of reaching your defined max drawdown."><i class="fa fa-info-circle"></i></span></p>
+                    <p class="dashboard-item-title">Max DD Probability&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="Probability of reaching your defined max drawdown."><i class="fa fa-info-circle"></i></span></p>
+                    <div class="d-md-none text-center">
+                        <p class="dashboard-item-description">(Probability of reaching your defined max drawdown)</p>
+                    </div>
                 </div>
                 <div class="col-md-auto calculator-output">
                     <span id="maxlossOutput"></span>
-                    <p>Max Conseq. Losses&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="The probability of experiencing 10 losing trades in a row."><i class="fa fa-info-circle"></i></span></p>
+                    <p class="dashboard-item-title">Max Conseq. Losses&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="Probability of experiencing 10 losing trades in a row."><i class="fa fa-info-circle"></i></span></p>
+                    <div class="d-md-none text-center">
+                        <p class="dashboard-item-description">(Probability of experiencing 10 losing trades in a row)</p>
+                    </div>
                 </div>
                 <div class="col-md-auto calculator-output">
                     <span id="maxwinOutput"></span>
-                    <p>Max Conseq. Wins&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="The probability of experiencing 10 winning trades in a row."><i class="fa fa-info-circle"></i></span></p>
+                    <p class="dashboard-item-title">Max Conseq. Wins&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="bottom" title="Probability of experiencing 10 winning trades in a row."><i class="fa fa-info-circle"></i></span></p>
+                    <div class="d-md-none text-center">
+                        <p class="dashboard-item-description">(Probability of experiencing 10 winning trades in a row)</p>
+                    </div>
                 </div>
             </div>
         </div>
