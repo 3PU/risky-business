@@ -19,13 +19,13 @@
         </div>
     </header>
     <div class="skewed-divider-cc"></div>
-    <section class="container accordionwrapper introduction">
+    <section class="container accordionwrapper introduction-container">
         <div class="row" id="rm-heading">
             <div class="col-12 item-heading">
                 <h5><span><i id="rm-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;Why is risk management important?</h5>
             </div>
         </div>
-        <div class="row item-content item-open" id="rm-content">
+        <div class="row item-content item-opened" id="rm-content">
             <div class="col-12 d-md-none text-center image-container">
                 <img src="assets/images/bitcoin.jpg" alt="Greyscale world map in the background with a phone in the foreground showing a bitcoin image.">
             </div>
@@ -38,7 +38,7 @@
             </div>
         </div>
     </section>
-    <section class="container accordionwrapper risk-of-ruin">
+    <section class="container accordionwrapper risk-of-ruin-container">
         <div class="row" id="ror-heading">
             <div class="col-12 item-heading">
                 <h5><span><i id="ror-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;What is Risk of Ruin?</h5>
@@ -58,7 +58,7 @@
             </div>
         </div>
     </section>
-    <section class="container accordionwrapper drawdown">
+    <section class="container accordionwrapper drawdown-container">
         <div class="row" id="dd-heading">
             <div class="col-12 item-heading">
                 <h5><span><i id="dd-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;Controlling Drawdown</h5>
@@ -79,7 +79,7 @@
             </div>
         </div>
     </section>
-    <section class="container accordionwrapper variance">    
+    <section class="container accordionwrapper variance-container">    
         <div class="row" id="v-heading">
             <div class="col-12 item-heading">
                 <h5><span><i id="v-chevron-icon" class="fa fa-chevron-down"></i></span>&nbsp;Accepting Variance</h5>
@@ -138,14 +138,14 @@
                 <div class="d-md-none text-center">
                     <p class="dashboard-item-description">(The max drawdown you are willing to accept)</p>
                 </div>
-                <input type="range" min="1" max="100" value="50" step="1"" class="slider" id="drawdownRange">
+                <input type="range" min="1" max="100" value="50" step="1" class="slider" id="drawdownRange">
             </div>
             <div class="col-md-auto slider-container">
                 <p class="dashboard-item-title">Number of Trades: <span id="numberOfTrialsDisplay"></span>&nbsp;&nbsp;&nbsp;<span class="dashboard-tooltip" data-toggle="tooltip" data-placement="top" title="The number of trades you want the calculations to be based upon."><i class="fa fa-info-circle"></i></span></p>
                 <div class="d-md-none text-center">
                     <p class="dashboard-item-description">(The number of trades you want the calculations to be based upon)</p>
                 </div>
-                <input type="range" min="100" max="1000" value="500" step="100"" class="slider" id="numberOfTrialsRange">
+                <input type="range" min="100" max="1000" value="500" step="100" class="slider" id="numberOfTrialsRange">
             </div>
         </div>
         <div class="container">
@@ -186,10 +186,10 @@
             <p>©2020 RISKY BUSINESS</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/accordion.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/dashboard.js"></script>
-<script type="text/javascript" src="assets/js/accordion.js"></script>
 </html>
