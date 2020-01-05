@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    /* Declares all variables to remain unchanged*/
+
     const winRateSlider = document.getElementById("winRateRange");
     const winRateOutput = document.getElementById("winRateDisplay");
     const payOffSlider = document.getElementById("payOffRange");
@@ -11,6 +13,9 @@ $(document).ready(function() {
     const numberOfTrialsSlider = document.getElementById("numberOfTrialsRange");
     const numberOfTrialsOutput = document.getElementById("numberOfTrialsDisplay");
 
+
+    /* Updates the slider-display and calculator output value upon each input */
+    
     winRateSlider.oninput = function() {
     winRateOutput.innerHTML = this.value + " %";
     riskOfRuinPercent();
@@ -43,9 +48,15 @@ $(document).ready(function() {
     maxDrawDown();
     }
 
+
+    /* Takes the final calculation output and updates the specified element in the calculator output fields accordingly */
+
     function setElementValue (elementID, value) {
         document.getElementById(elementID).innerHTML = value.toFixed(2) + " %";
     }
+
+
+    /* Performs calculation based on input values*/
 
     function riskOfRuin (w, p, r, n) {
         var totalRiskOfRuin = ((w + (r *10)) - (p *5) *n / 1000);
@@ -66,6 +77,9 @@ $(document).ready(function() {
         var totalMaxWinningStreak = (w * n) *0.001;
         return totalMaxWinningStreak;
     }
+
+
+    /* Defines variables based on each slider and forwards the value to the calculation function and set element function */
 
     var riskOfRuinPercent = function () {
         var w = parseInt(winRateSlider.value);
@@ -98,16 +112,25 @@ $(document).ready(function() {
         setElementValue("maxwinOutput", calculatedMaxWinningStreak);
     }
 
+
+    /* Ensures slider value output directly upon page load and not only after user input */
+
     winRateOutput.innerHTML = winRateSlider.value + " %";
     payOffOutput.innerHTML = payOffSlider.value + "R";
     riskPerTradeOutput.innerHTML = riskPerTradeSlider.value + " %";
     drawdownOutput.innerHTML = drawdownSlider.value + " %";
     numberOfTrialsOutput.innerHTML = numberOfTrialsSlider.value;
 
+
+    /* Ensures calculator output values are updated directly on page load and not only after user input */
+
     riskOfRuinPercent();
     maxDrawDown();
     maxLosingStreak();
     maxWinningStreak();
+
+
+    /* Enables dashboard tooltip */
 
     $('.dashboard-tooltip').tooltip();
 

@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    /*Checks for for certain classes when a headline is clicked and changes
+    these in order to open/close a section using css styling. Ensures only
+    one section is open at a time and when one opens, all other sections are
+    closed. Also changes the applicable icon (arrow) to point into the right
+    direction */
+
     $("#rm-heading").on("click", function() {
         if ($("#rm-content").hasClass("item-closed")) {
             $("#rm-chevron-icon").removeClass("fa-chevron-down").addClass("fa-chevron-up");
