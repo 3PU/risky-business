@@ -78,7 +78,11 @@ A live demo of the website can be found [here](https://3pu.github.io/risky-busin
 ### Colors & Layout
 
 My goal was to create a clean, yet effective UI. By using a black background and light blue/grey text colors I achieved a high contrast that is pleasing to the viewers eye without being 'too much'.
-In order to make the UI slightly more interesting, I added a skewed background divider, using a subtle grey color. I also tried giving each section and the risk calculator as much real estate on the page as possible.
+
+In order to make the UI slightly more interesting, I added a skewed background divider, using a subtle grey color.
+
+I also tried giving each section and the risk calculator as much real estate on the page as possible.
+
 Instead of using a standard/old-style way of a calculator where the user manually enters values and the presses a 'calculate' button to receive the calculations, I decided to use sliders that update the calculations upon each input directly, making the website and calculator feel more alive and engaging.
 
 ### Responsiveness
@@ -151,25 +155,25 @@ The site was created using a mobile-first approach and is highly responsive. Tes
 
 Initial testing of responsiveness was performed using the developer tools in Google Chrome and towards the end of the project also live on a surface pro 4, iPhone 5, iPhone 7 Plus and iPhone X.
 
-Towards the end, I used a service/tool called Reposinator (see testing tools for details & link) to do final checks on multiple screen sizes.
+Towards the end, I used a service/tool called Responsinator (see testing tools for details & link) to do final checks on multiple screen sizes.
 
-One major problem that stood out immediately on mobile devices was the size of the slider-thumbs which was too small to be easily selected with a finger. I therefore introduces a media query that increased the slider-thumb size on screens small than 768px.
+One major problem that stood out immediately on mobile devices was the size of the slider-thumbs which was too small to be easily selected with a finger. I therefore introduces a media query that increased the slider-thumb size on screens smaller than 768px.
 
-Another error I encountered was an overflow of the image outside the section div which was caused by a min-width setting I initially had added. I fixed this by replacing the min-width setting with a height: 100% and width: auto setting.
+Another error I encountered was an overflow of the section images outside of the parrent div which was caused by a *min-width* setting I initially had added. I fixed this by replacing the *min-width* setting with a *height: 100%* and *width: auto* setting.
 
 Below is a short summary of the key features of the responsive design.
 
 **On screens above 768px:**
 
 - Text and image within each section are set to inline.
-- On-hover tooltips are available in the calculator dashboard to explain each metric.
-- Slider-thumbs in the calculator are smaller in order to achieve a more minimalistic/professional look.
+- On-hover tooltip icons are available in the calculator dashboard to explain each metric.
+- Slider-thumbs in the calculator are more narrow in order to achieve a more minimalistic/professional look.
 
 **On screens below 768px:**
 
 - Text and image within each section are set to block.
-- Tooltips are replaced with small text below the metric to explain them as 'hover' is not an option on touchscreen devices.
-- Slider-thumbs in the calculator increase in size to make it easier to use on touchscreen devices.
+- Tooltip icons are replaced with small text below the metric to explain them as 'hover' is not an option on touchscreen devices.
+- Slider-thumbs in the calculator increase in width to make it easier to interact with them on touchscreen devices.
 - Calculator metrics and sliders are set to block instead of inline so they do not get too small.
 
 ### Browser Compability
@@ -178,9 +182,9 @@ Browser compability testing was performed across multiple browsers such as Chrom
 
 During this phase of testing, I noticed that the calculator-sliders did not reflect the correct styling in Microsoft Edge which I addressed (see challenges above for more details).
 
-I also, on purpose introduced broken image links to ensure the ALT attributes loaded and showed correctly in all browsers.
+I also, on purpose introduced broken image links to ensure the ALT attributes loaded and showed correctly in all browsers, which worked as intended.
 
-During testing towards the end of the project, I deployed the site via GitHub pages, loaded it live on mobile devices such as iPhone 7 Plus and iPhone X. No errors were observed.
+During testing towards the end of the project, I deployed the site via GitHub pages, loaded it live on both a stationary desktop PC, surface pro 4 and mobile devices such as iPhone 7 Plus and iPhone X. No errors were observed.
 
 ### Navigation & Section Accordion
 
@@ -192,11 +196,11 @@ This ensures that the vertical page size is kept compressed at all times. Accord
 
 On tablets and smartphones, the same behavior stood out (i.e. viewers never used the toggler-navigation) because scrolling on a touchscreen was both easy and fast.
 
-I performed substancial testing of the accordion feature. No functionality errors were observed but the initial slow transition speed made the section open and collapse, followed by a slow transition of the content. This was fixed by increasing the transition speed.
+I performed substancial testing of the accordion feature. No functionality errors were observed but the initial slow transition speed made the section open and collapse fast, followed by a slow transition of the content behind the headlines of each section. This was fixed by increasing the transition speed.
 
 ### Calculator dashboard
 
-Each slider of the calculator does not have an effect on each output. For example, the payoff ratio slider does not have any effect on the max drawdown probability or the probability of seing X consequtive losses/wins in a row, whilst the win rate and number of trades sliders have an effect on all outputs.
+Each slider of the calculator does not have an effect on each output because each output relies on specific input values only, not all. For example, the payoff ratio slider does not have any effect on the max drawdown probability or the probability of seing X consequtive losses/wins in a row, whilst the win rate and number of trades sliders have an effect on all outputs.
 
 The functionality of the calculator and each slider was tested manually on multiple devices by me, family members and friends and no errors were observed.
 
@@ -206,13 +210,13 @@ The javascript code was checked using a javascript validator (see testing tools 
 
 **I intuitiviely want to understand how to use the navigation and calculator without receiving instructions.**
 
-This is achieved by using up/down arrows (fontawesome chevron icon) on the compressed sections and using sliders in the calculator which should have an intuitive effectu upon the user and trigger the learned in behavior to use these to interact with the site without the need of any explanation (see testing section for more details).
+This is achieved by using up/down arrows (fontawesome chevron icon) on the compressed sections and using sliders in the calculator which should have an intuitive effect upon the user and trigger the learned in behavior to use these to interact with the site without the need of any explanation (see testing section for more details).
 
 **I want to receive clear and short explanations of why risk control is important and what each metric/output mentioned on the site means and why I need to pay attention to them as a trader.**
 
-This is achieved through the eplanatory text in each section and by using tooltips and tips/hints.
+This is achieved through the eplanatory text in each section and by using tooltips on large screens and text snippets on small screens.
 
-On screen sizes above 768px, tooltip icons 'i' are provided behind each metric/output which display a tooltip with further explanation upon mouse hover.
+On screen sizes above 768px, tooltip icons **'i'** are provided behind each metric/output which display a tooltip with further explanation upon mouse hover.
 
 On screen sizes below 768px, text snippets are provided within parentheses below each metric/outpit whith further explanation.
 
@@ -241,6 +245,7 @@ To do this follow these steps:
 2. Click on 'Settings' to the far right in navigation menu below your repository name.
 3. Scroll down to 'GitHub Pages' and select 'master branch' as the **source**.
 4. Click **save**.
+5. The link to the site hosted on GitHub Pages should appear at the top of the section.
 
 If you do want to clone this repository in order to run the code locally on your machine, follow these steps:
 
@@ -267,6 +272,8 @@ The images used accross the page were obtained from [Pexels](https://www.pexels.
 ### Acknowledgements
 
 - I got the idea for the skewed divider background from this [page](https://codepen.io/chilliconcode/pen/epQORa), which I modified to fit the styling and design of the page.
+
+- I learned how to style range inputs and sliders from this [page](https://www.w3schools.com/howto/howto_js_rangeslider.asp).
 
 - Big thank you to my Code Institute Mentor Brian M. for his invaluable support and guidance throughout this project.
 
